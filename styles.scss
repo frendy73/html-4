@@ -1,0 +1,159 @@
+$primary-color: #333;
+$secondary-color: #666;
+$background-color: #f0f0f0;
+$font-family: 'Arial', sans-serif;
+$font-color: white;
+
+body {
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header, .footer {
+    background-color: $primary-color;
+    color: $font-color;
+    text-align: center;
+    padding: 15px 0;
+
+    .nav__list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+
+        .nav__item {
+            margin: 0 20px;
+        }
+
+        .nav__link {
+            text-decoration: none;
+            color: $font-color;
+            font-weight: bold;
+        }
+    }
+}
+
+.hero {
+    color: $primary-color;
+    text-align: center;
+    padding: 100px 20px;
+
+    &__title {
+        font-size: 3em;
+        color: black;
+    }
+
+    &__description {
+        font-size: 1.5em;
+        color: black;
+    }
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    &__text {
+        color: $font-color;
+    }
+}
+
+.about-hero, .contact-info {
+    background: $background-color;
+    padding: 50px 20px;
+    text-align: center;
+
+    &__title {
+        color: $primary-color;
+        font-size: 2.5em;
+    }
+}
+
+.about-content, .about-team, .contact-info {
+    padding: 40px 20px;
+    text-align: center;
+
+    &__title {
+        color: $primary-color;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        color: $secondary-color;
+        font-size: 1.2em;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+.contact-form {
+    form {
+        max-width: 600px;
+        margin: 40px auto;
+        text-align: center;
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: $primary-color;
+            color: $font-color;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #555;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 10px;
+
+        &__title {
+            font-size: 2em;
+        }
+
+        &__description {
+            font-size: 1em;
+        }
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+
+        .nav__item {
+            margin: 10px 0;
+        }
+    }
+
+    .footer {
+        padding: 10px 0;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        width: 90% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero__title {
+        font-size: 1.5em;
+    }
+}

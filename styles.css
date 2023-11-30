@@ -1,0 +1,134 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header, .footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+.header .nav__list, .footer .nav__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.header .nav__list .nav__item, .footer .nav__list .nav__item {
+  margin: 0 20px;
+}
+.header .nav__list .nav__link, .footer .nav__list .nav__link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.hero {
+  color: #333;
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero__title {
+  font-size: 3em;
+  color: black;
+}
+.hero__description {
+  font-size: 1.5em;
+  color: black;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footer__text {
+  color: white;
+}
+
+.about-hero, .contact-info {
+  background: #f0f0f0;
+  padding: 50px 20px;
+  text-align: center;
+}
+.about-hero__title, .contact-info__title {
+  color: #333;
+  font-size: 2.5em;
+}
+
+.about-content, .about-team, .contact-info {
+  padding: 40px 20px;
+  text-align: center;
+}
+.about-content__title, .about-team__title, .contact-info__title {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.about-content__text, .about-team__text, .contact-info__text {
+  color: #666;
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form form {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+}
+.contact-form form input[type=text], .contact-form form input[type=email], .contact-form form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.contact-form form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+.contact-form form button:hover {
+  background-color: #555;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 50px 10px;
+  }
+  .hero__title {
+    font-size: 2em;
+  }
+  .hero__description {
+    font-size: 1em;
+  }
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav__list .nav__item {
+    margin: 10px 0;
+  }
+  .footer {
+    padding: 10px 0;
+  }
+  .contact-form input[type=text],
+  .contact-form input[type=email],
+  .contact-form textarea {
+    width: 90% !important;
+  }
+}
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 1.5em;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
